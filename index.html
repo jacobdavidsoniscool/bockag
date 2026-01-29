@@ -85,18 +85,20 @@
     </script>
     <script>
      function openList(url) {
-       window.open(url)
+        var win = window.open('');
+        win.document.write('<iframe src="' + url +'" frameborder="0"></iframe>');
+win.document.write('<style>iframe {width: 100%; height: 100%; frameborder: 0; border: none; margin: 0; padding: 0;} html, body { margin: 0; padding: 0px;}</style>');
      }
        </script>
   </head>
   <body>
     <h1 id='header'>Bockag Games</h1>
     
-    <button id='gamesButton' onclick='openList("https://jacobdavidsoniscool.github.io/games")'>
+    <button id='gamesButton' onclick='openList("https://power-school.github.io/classroom")'>
       <span class="title">Games</span>
       <span class='buttonInfo'>Main games</span>
     </button>
-    <button id='otherButton' onclick='openList("https://jacobdavidsoniscool.github.io/Other")'>
+    <button id='otherButton' onclick='openList("https://power-school.github.io/grades")'>
 <span class='title'>Other</span>
 <span class='buttonInfo'>Suggestion form, etc.</span> 
 </button>
